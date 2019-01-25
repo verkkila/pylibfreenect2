@@ -1196,6 +1196,11 @@ cdef class Freenect2Device:
         pyparams.params = params
         return pyparams
 
+    def setIrCameraParams(self, IrCameraParams pyparams):
+        cdef _Freenect2Device.IrCameraParams irparams
+        irparams = pyparams.params
+        self.ptr.setIrCameraParams(irparams)
+
     def setColorFrameListener(self, FrameListener listener):
         """Same as
         ``libfreenect2::Freenect2Device::setColorFrameListener(FrameListener*)``

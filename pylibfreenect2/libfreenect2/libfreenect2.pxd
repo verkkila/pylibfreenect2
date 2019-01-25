@@ -84,7 +84,7 @@ cdef extern from "libfreenect2/libfreenect2.hpp" namespace "libfreenect2":
         IrCameraParams getIrCameraParams()
 
         # void setColorCameraParams(ColorCameraParams &)
-        # void setIrCameraParams(const Freenect2Device::IrCameraParams &)
+        void setIrCameraParams(const IrCameraParams &)
 
         void setColorFrameListener(FrameListener*)
         void setIrAndDepthFrameListener(FrameListener*)
